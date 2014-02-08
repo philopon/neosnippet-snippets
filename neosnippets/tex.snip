@@ -85,8 +85,12 @@ alias   \begin{verse} \verse
 
 snippet table
 alias   \begin{table} \table
-	\begin{table}
-		${1:TARGET}
+	\begin{table}[${1}]
+    \caption{${2}}
+    \label{${3}}
+    \begin{tabular}{${4}}
+	   	${5:TARGET}
+    \end{tabular}
 	\end{table}
 
 snippet thebibliography
@@ -106,12 +110,6 @@ alias   \begin{note} \note
 	\begin{note}
 		${1:TARGET}
 	\end{note}
-
-snippet tabular
-alias   \begin{tabular} \tabular
-	\begin{tabular}{${1}}
-		${2:TARGET}
-	\end{tabular}
 
 snippet overlay
 alias   \begin{overlay} \overlay
