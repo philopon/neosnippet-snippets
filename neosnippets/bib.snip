@@ -82,6 +82,14 @@ alias   @misc
         memo = {author, title, howpublished, month, year, note},
 	}
 
+snippet online
+alias @online
+    @online{${1:LABEL},
+        author = {${2}},
+        title = {${3}},
+        url   = {${4}}
+    }
+
 snippet phdthesis
 alias   @phdthesis
     @phdthesis{${1:LABEL},
