@@ -2,6 +2,15 @@ snippet      language
 abbr         {-# LANGUAGE ... #-}
   {-# LANGUAGE ${1} #-}
 
+snippet     inline
+abbr        {-# INLINE ... #-}
+  {-# INLINE ${1} #-}
+
+snippet     scc
+abbr        {-# SCC "..." #-}
+options     head
+  {-# SCC "${1}" #-}
+
 # hard-tab is necessary
 snippet      case
 abbr         case ... of
