@@ -84,7 +84,7 @@ snippet try
     }
 
 snippet try_resources
-    try (${1:#:Resources}){
+    try (${1:#:Resources}) {
         ${0:TARGET}
     } catch (${2:Exception} ${3:e}) {
         ${4:e.printStackTrace();}
@@ -147,9 +147,12 @@ snippet j.m
     java.math.
 
 snippet main
-    public static void main(String[] args) {
-        ${0}
+    class `expand('%:p:t:r')` {
+        public static void main(String args[]) {
+            ${0:#:body}
+        }
     }
+
 
 snippet println
     System.out.println(${1});${0}
